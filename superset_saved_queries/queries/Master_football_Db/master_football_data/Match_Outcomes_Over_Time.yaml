@@ -1,0 +1,11 @@
+catalog: null
+schema: master_football_data
+label: "\U0001F4C5 Match Outcomes Over Time"
+description: ''
+sql: "SELECT\n  Date,\n  COUNT(CASE WHEN Result = 'Home' THEN 1 END) AS HomeWins,\n\
+  \  COUNT(CASE WHEN Result = 'Away' THEN 1 END) AS AwayWins,\n  COUNT(CASE WHEN Result\
+  \ = 'Draw' THEN 1 END) AS Draws\nFROM master_football_data.cleaned_results\nGROUP\
+  \ BY Date\nORDER BY Date;"
+uuid: da1a19ec-016f-4ab7-bdf8-5031e73ea949
+version: 1.0.0
+database_uuid: 19b8c841-a0b4-4841-9c59-ab332398855b
