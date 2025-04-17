@@ -1,0 +1,10 @@
+catalog: null
+schema: master_football_data
+label: "Month-wise Match Count from 2000\u20132013"
+description: ''
+sql: "SELECT \n  MONTH(CAST(Date AS DATE)) AS MonthNumber,\n  COUNT(*) AS MatchCount\n\
+  FROM master_football_data.cleaned_results\nWHERE YEAR(CAST(Date AS DATE)) BETWEEN\
+  \ 2000 AND 2013\nGROUP BY MONTH(CAST(Date AS DATE))\nORDER BY MonthNumber;"
+uuid: 6db543cb-3fc7-412c-9783-926823dd17fd
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

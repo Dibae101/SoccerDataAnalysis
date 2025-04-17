@@ -1,0 +1,10 @@
+catalog: null
+schema: master_football_data
+label: Year-over-Year Result Comparison (for one team)
+description: ''
+sql: "SELECT\n  YEAR(STR_TO_DATE(Date, '%Y-%m-%d')) AS match_year,\n  Result,\n  COUNT(*)\
+  \ AS result_count\nFROM master_football_data.cleaned_results\nWHERE HomeTeam = 'Barcelona'\
+  \ OR AwayTeam = 'Barcelona'\nGROUP BY match_year, Result\nORDER BY match_year;"
+uuid: 45d18fd6-61bb-4a8e-90ab-f440eb5bc299
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

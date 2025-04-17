@@ -1,0 +1,8 @@
+catalog: null
+schema: master_football_data
+label: Yearly Away Wins for a Team (Barcelona)
+description: ''
+sql: SELECT ...
+uuid: effea93d-d91c-499c-b713-bcc42cfdd0fa
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

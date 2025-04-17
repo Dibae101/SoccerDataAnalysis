@@ -1,0 +1,15 @@
+catalog: null
+schema: master_football_data
+label: Top 5 Teams by Total Wins (Home + Away)
+description: ''
+sql: "SELECT Team, \n       SUM(WinCount) AS TotalWins, \n       SUM(MatchCount) AS\
+  \ TotalMatches,\n       ROUND(SUM(WinCount) / SUM(MatchCount), 4) AS WinRate\nFROM\
+  \ (\n  SELECT HomeTeam AS Team, COUNT(*) AS MatchCount,\n         SUM(CASE WHEN\
+  \ Result = 'Home' THEN 1 ELSE 0 END) AS WinCount\n  FROM master_football_data.cleaned_results\n\
+  \  GROUP BY HomeTeam\n\n  UNION ALL\n\n  SELECT AwayTeam AS Team, COUNT(*) AS MatchCount,\n\
+  \         SUM(CASE WHEN Result = 'Away' THEN 1 ELSE 0 END) AS WinCount\n  FROM master_football_data.cleaned_results\n\
+  \  GROUP BY AwayTeam\n) AS CombinedStats\nWHERE Team NOT LIKE 'St. Pauli'\nGROUP\
+  \ BY Team\nORDER BY WinRate DESC\nLIMIT 5;"
+uuid: b53295ac-565e-42ea-8f04-d1d7938ffdf6
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

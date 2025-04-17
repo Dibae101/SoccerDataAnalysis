@@ -1,0 +1,9 @@
+catalog: null
+schema: master_football_data
+label: Top Away Teams by Wins
+description: ''
+sql: "SELECT\n  AwayTeam,\n  COUNT(*) AS AwayWins\nFROM master_football_data.cleaned_results\n\
+  WHERE Result = 'Away'\nGROUP BY AwayTeam\nORDER BY AwayWins DESC\nLIMIT 10;"
+uuid: 06266286-5fbf-40a9-aa15-cbec8148a531
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

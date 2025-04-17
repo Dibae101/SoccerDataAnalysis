@@ -1,0 +1,11 @@
+catalog: null
+schema: master_football_data
+label: Overall Wins by Barcelona (Home + Away) per Year
+description: ''
+sql: "SELECT\n  YEAR(STR_TO_DATE(Date, '%Y-%m-%d')) AS Year,\n  COUNT(*) AS TotalWins\n\
+  FROM master_football_data.cleaned_results\nWHERE\n  (HomeTeam = 'Barcelona' AND\
+  \ Result = 'Home')\n  OR\n  (AwayTeam = 'Barcelona' AND Result = 'Away')\nGROUP\
+  \ BY Year\nORDER BY Year;"
+uuid: ec3b5d51-947a-4783-b8e0-e9b200be7f36
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

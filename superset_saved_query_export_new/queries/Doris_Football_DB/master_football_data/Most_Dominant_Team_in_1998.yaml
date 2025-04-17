@@ -1,0 +1,16 @@
+catalog: null
+schema: master_football_data
+label: "Most Dominant Team in 1998\u200B"
+description: ''
+sql: "SELECT\n  Team,\n  SUM(HomeWins) AS HomeWins,\n  SUM(AwayWins) AS AwayWins,\n\
+  \  SUM(MatchCount) AS TotalGames\nFROM (\n  SELECT\n    HomeTeam AS Team,\n    COUNT(*)\
+  \ AS MatchCount,\n    SUM(CASE WHEN Result = 'Home' THEN 1 ELSE 0 END) AS HomeWins,\n\
+  \    0 AS AwayWins\n  FROM master_football_data.cleaned_results\n  WHERE YEAR(CAST(Date\
+  \ AS DATETIME)) = 1998\n  GROUP BY HomeTeam\n\n  UNION ALL\n\n  SELECT\n    AwayTeam\
+  \ AS Team,\n    COUNT(*) AS MatchCount,\n    0 AS HomeWins,\n    SUM(CASE WHEN Result\
+  \ = 'Away' THEN 1 ELSE 0 END) AS AwayWins\n  FROM master_football_data.cleaned_results\n\
+  \  WHERE YEAR(CAST(Date AS DATETIME)) = 1998\n  GROUP BY AwayTeam\n) AS Combined\n\
+  GROUP BY Team\nORDER BY (HomeWins + AwayWins) DESC\nLIMIT 1;"
+uuid: 68a706d7-3f49-4f2d-8721-7a10d7826415
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

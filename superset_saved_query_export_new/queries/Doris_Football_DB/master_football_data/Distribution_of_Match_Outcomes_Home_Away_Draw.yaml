@@ -1,0 +1,9 @@
+catalog: null
+schema: master_football_data
+label: Distribution of Match Outcomes (Home/Away/Draw)
+description: ''
+sql: "SELECT \n  Result,\n  COUNT(*) AS count\nFROM master_football_data.cleaned_results\n\
+  GROUP BY Result;"
+uuid: 44c75b36-66d5-4cc3-8d8c-f338a847fc48
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

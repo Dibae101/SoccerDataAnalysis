@@ -1,0 +1,11 @@
+catalog: null
+schema: master_football_data
+label: Win/Loss Ratio per Team
+description: ''
+sql: "SELECT\n  HomeTeam AS team,\n  SUM(CASE WHEN Result = 'Home' THEN 1 ELSE 0 END)\
+  \ AS wins,\n  SUM(CASE WHEN Result = 'Away' THEN 1 ELSE 0 END) AS losses,\n  SUM(CASE\
+  \ WHEN Result = 'Draw' THEN 1 ELSE 0 END) AS draws\nFROM master_football_data.cleaned_results\n\
+  GROUP BY team\nORDER BY wins DESC;"
+uuid: 6d2a4a97-44ca-42b2-ac58-eec8453518fa
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

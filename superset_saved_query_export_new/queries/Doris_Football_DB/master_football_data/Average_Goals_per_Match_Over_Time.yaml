@@ -1,0 +1,8 @@
+catalog: null
+schema: master_football_data
+label: Average Goals per Match Over Time
+description: ''
+sql: Average Goals per Match Over Time
+uuid: 6c1a1536-9053-4a19-9226-721bf2d59b06
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

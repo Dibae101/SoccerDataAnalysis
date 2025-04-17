@@ -1,0 +1,13 @@
+database_name: Doris_Football_DB
+sqlalchemy_uri: mysql://root:@18.223.11.133:9030/master_football_data
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c
+version: 1.0.0

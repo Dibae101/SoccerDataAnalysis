@@ -1,0 +1,13 @@
+catalog: null
+schema: master_football_data
+label: Yearly Win Rate Trend
+description: ''
+sql: "SELECT\n  EXTRACT(YEAR FROM CAST(Date AS DATE)) AS Year,\n  ROUND(SUM(CASE WHEN\
+  \ Result = 'Home' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS HomeWinRate,\n  ROUND(SUM(CASE\
+  \ WHEN Result = 'Away' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS AwayWinRate,\n\
+  \  ROUND(SUM(CASE WHEN Result = 'Draw' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2)\
+  \ AS DrawRate\nFROM master_football_data.cleaned_results\nGROUP BY Year\nORDER BY\
+  \ Year;"
+uuid: 1d0ac19d-e7d4-423b-bcd8-9b283cf0e5b3
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

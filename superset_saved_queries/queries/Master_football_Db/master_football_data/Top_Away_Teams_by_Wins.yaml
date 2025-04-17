@@ -1,9 +1,0 @@
-catalog: null
-schema: master_football_data
-label: "\u26BD Top Away Teams by Wins"
-description: ''
-sql: "SELECT\n  AwayTeam,\n  COUNT(*) AS AwayWins\nFROM master_football_data.cleaned_results\n\
-  WHERE Result = 'Away'\nGROUP BY AwayTeam\nORDER BY AwayWins DESC\nLIMIT 10;"
-uuid: 277253ce-07af-47ad-99bc-e27498ffdedf
-version: 1.0.0
-database_uuid: 19b8c841-a0b4-4841-9c59-ab332398855b

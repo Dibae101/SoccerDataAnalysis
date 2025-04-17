@@ -1,0 +1,8 @@
+catalog: null
+schema: master_football_data
+label: Monthly Win Rate Trend (Across All Years)
+description: ''
+sql: ''
+uuid: 96b00505-1be1-42d0-b1bb-2f950bd72d1d
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

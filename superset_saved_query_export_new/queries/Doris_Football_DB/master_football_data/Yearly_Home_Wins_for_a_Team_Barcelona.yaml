@@ -1,0 +1,10 @@
+catalog: null
+schema: master_football_data
+label: Yearly Home Wins for a Team (Barcelona)
+description: ''
+sql: "SELECT\n  YEAR(STR_TO_DATE(Date, '%Y-%m-%d')) AS Year,\n  COUNT(*) AS HomeWins\n\
+  FROM master_football_data.cleaned_results\nWHERE HomeTeam = 'Barcelona' AND Result\
+  \ = 'Home'\nGROUP BY Year\nORDER BY Year;"
+uuid: f80042ad-57eb-4723-9f64-65a320ffc806
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

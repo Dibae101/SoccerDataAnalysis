@@ -1,0 +1,11 @@
+catalog: null
+schema: master_football_data
+label: "Year Barcelona scored more than 2 goals and won \u200B"
+description: ''
+sql: "SELECT YEAR(CAST(Date AS DATETIME)) AS MatchYear, COUNT(*) AS MatchesWonAbove2Goals\n\
+  FROM master_football_data.cleaned_results\nWHERE (\n    (HomeTeam = 'Barcelona'\
+  \ AND Result = 'Home' AND HomeScore > 2)\n    OR\n    (AwayTeam = 'Barcelona' AND\
+  \ Result = 'Away' AND AwayScore > 2)\n)\nGROUP BY MatchYear\nORDER BY MatchYear;"
+uuid: b04aea3f-3910-43d3-8bce-2b39265036f6
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

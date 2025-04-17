@@ -1,19 +1,17 @@
 import csv
 import mysql.connector
 
-# Replace with your actual Doris connection details
 config = {
     'host': '18.223.11.133',
     'port': 9030,
     'user': 'root',
-    'password': '',  # Add if needed
+    'password': '', 
     'database': 'master_football_data'
 }
 
 output_csv_path = 'cleaned_results_export.csv'
 
 try:
-    # Connect to Doris via MySQL protocol
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
 

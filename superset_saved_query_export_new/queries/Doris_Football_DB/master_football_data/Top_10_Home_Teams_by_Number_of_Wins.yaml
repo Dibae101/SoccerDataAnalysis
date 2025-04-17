@@ -1,0 +1,8 @@
+catalog: null
+schema: master_football_data
+label: Top 10 Home Teams by Number of Wins
+description: ''
+sql: SELECT ...
+uuid: f488b272-d691-42b4-842b-022065b405ee
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

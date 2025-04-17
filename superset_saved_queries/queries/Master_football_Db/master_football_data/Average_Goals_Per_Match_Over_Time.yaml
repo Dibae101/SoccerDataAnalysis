@@ -1,9 +1,0 @@
-catalog: null
-schema: master_football_data
-label: "\U0001F4C8 Average Goals Per Match Over Time"
-description: ''
-sql: "SELECT\n  Date,\n  AVG(HomeScore + AwayScore) AS AvgGoals\nFROM master_football_data.cleaned_results\n\
-  GROUP BY Date\nORDER BY Date;"
-uuid: 1c0eea5c-96ad-4403-81ea-fe5e52e796c2
-version: 1.0.0
-database_uuid: 19b8c841-a0b4-4841-9c59-ab332398855b

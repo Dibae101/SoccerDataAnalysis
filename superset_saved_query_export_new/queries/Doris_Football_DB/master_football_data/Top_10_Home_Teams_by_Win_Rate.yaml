@@ -1,0 +1,11 @@
+catalog: null
+schema: master_football_data
+label: Top 10 Home Teams by Win Rate (%)
+description: ''
+sql: "SELECT\n  HomeTeam AS Team,\n  COUNT(CASE WHEN Result = 'Home' THEN 1 END) AS\
+  \ HomeWins,\n  COUNT(CASE WHEN Result = 'Away' THEN 1 END) AS HomeLosses,\n  COUNT(CASE\
+  \ WHEN Result = 'Draw' THEN 1 END) AS Draws\nFROM master_football_data.cleaned_results\n\
+  GROUP BY HomeTeam\nORDER BY HomeWins DESC\nLIMIT 15;"
+uuid: ab019374-6358-4d61-b388-f41ba68464e9
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

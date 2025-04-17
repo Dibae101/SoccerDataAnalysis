@@ -1,0 +1,9 @@
+catalog: null
+schema: master_football_data
+label: Overall Result Distribution
+description: ''
+sql: "SELECT\n  Result,\n  COUNT(*) AS match_count\nFROM master_football_data.cleaned_results\n\
+  GROUP BY Result\nORDER BY match_count DESC;"
+uuid: 673922b8-19a7-48fb-968f-78079de661e8
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

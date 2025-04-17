@@ -1,0 +1,9 @@
+catalog: null
+schema: master_football_data
+label: Top Home Teams by Wins
+description: ''
+sql: "SELECT\n  HomeTeam,\n  COUNT(*) AS HomeWins\nFROM master_football_data.cleaned_results\n\
+  WHERE Result = 'Home'\nGROUP BY HomeTeam\nORDER BY HomeWins DESC\nLIMIT 10;"
+uuid: 2589c894-38fa-4546-a7c8-973e91f5db5a
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c

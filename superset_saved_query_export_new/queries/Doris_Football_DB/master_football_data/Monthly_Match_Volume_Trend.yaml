@@ -1,0 +1,10 @@
+catalog: null
+schema: master_football_data
+label: Monthly Match Volume Trend
+description: ''
+sql: "SELECT\n  DATE_FORMAT(STR_TO_DATE(Date, '%Y-%m-%d'), '%Y-%m') AS month,\n  COUNT(*)\
+  \ AS match_count\nFROM master_football_data.cleaned_results\nGROUP BY month\nORDER\
+  \ BY month;"
+uuid: 96914752-9772-4433-8333-585b2623f675
+version: 1.0.0
+database_uuid: 78c2d84f-0bcd-48c2-b8ea-b072fea6570c
