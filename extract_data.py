@@ -16,7 +16,7 @@ try:
     cursor = conn.cursor()
 
     # Run SELECT query
-    query = "SELECT * FROM cleaned_results"
+    query = "SELECT * FROM all_results"
     cursor.execute(query)
 
     # Fetch column names

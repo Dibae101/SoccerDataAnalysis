@@ -52,4 +52,14 @@ CREATE TABLE IF NOT EXISTS Team_Attributes (
     ) ENGINE=OLAP
     DISTRIBUTED BY HASH(id) BUCKETS 10
     PROPERTIES ("replication_num" = "1");
+
+
+# show last 100 columns of uncleaned data
+
+SELECT *
+FROM master_football_data.all_results
+ORDER BY Date DESC
+LIMIT 100;
+
+
     

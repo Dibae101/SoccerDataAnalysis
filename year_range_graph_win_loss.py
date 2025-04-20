@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 # Load and clean the CSV
 df = pd.read_csv("master_football_data.csv")
 
-df["Date"] = pd.to_datetime(df["Date"], errors="coerce", dayfirst=True)
+df["Date"] = pd.to_datetime(df["Date"], format="%Y-%m-%d", errors="coerce")
 df = df.dropna(subset=["Date"])
 
 df["Year"] = df["Date"].dt.year
